@@ -3,6 +3,12 @@ title = "奖项"
 description = "我获得的荣誉与奖项。"
 
 [[items]]
+title = "浙江大学优秀毕业生"
+subtitle = "浙江大学"
+date = "2026"
+content = "因综合表现优秀获得。"
+
+[[items]]
 title = "浙江省政府奖学金"
 subtitle = "浙江省政府"
 date = "2025"

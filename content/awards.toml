@@ -3,6 +3,12 @@ title = "Awards"
 description = "Honors and awards I have received."
 
 [[items]]
+title = "Outstanding Graduate of Zhejiang University"
+subtitle = "Zhejiang University"
+date = "2026"
+content = "Awarded for outstanding overall performance."
+
+[[items]]
 title = "Zhejiang Provincial Government Scholarship"
 subtitle = "Zhejiang Provincial Government"
 date = "2025"
