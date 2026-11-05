@@ -158,11 +158,12 @@ export default function Profile({ author, social, features, researchInterests }:
                                         setShowAddress(!isAddressPinned);
                                         setLastClickedTooltip('address');
                                     }}
-                                    className={`p-2 sm:p-2 transition-colors duration-200 ${isAddressPinned
+                                    className={`p-2 rounded-md hover:bg-accent/10 transition-colors duration-200 ${isAddressPinned
                                         ? 'text-accent'
                                         : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
                                         }`}
                                     aria-label={link.name}
+                                    aria-expanded={link.isLocation ? showAddress || isAddressPinned : showEmail || isEmailPinned}
                                 >
                                     {isAddressPinned ? (
                                         <MapPinSolidIcon className="h-5 w-5" />
@@ -178,7 +179,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
                                             animate={{ opacity: 1, y: -10, scale: 1 }}
                                             exit={{ opacity: 0, y: -20, scale: 0.8 }}
-                                            className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-neutral-800 text-white px-4 py-3 rounded-lg text-sm font-medium shadow-lg max-w-[calc(100vw-2rem)] sm:max-w-none sm:whitespace-nowrap ${lastClickedTooltip === 'address' ? 'z-20' : 'z-10'
+                                            className={`contact-popover absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full px-4 py-3 text-sm max-w-[calc(100vw-2rem)] sm:max-w-none sm:whitespace-nowrap ${lastClickedTooltip === 'address' ? 'z-20' : 'z-10'
                                                 }`}
                                             onMouseEnter={() => {
                                                 if (!isAddressPinned) setShowAddress(true);
@@ -188,9 +189,9 @@ export default function Profile({ author, social, features, researchInterests }:
                                         >
                                             <div className="text-center">
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
-                                                    <p className="font-semibold">{messages.profile.workAddress}</p>
+                                                    <p className="contact-popover-title font-semibold">{messages.profile.workAddress}</p>
                                                     {!isAddressPinned && (
-                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-400 opacity-60">
+                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-500">
                                                             <Pin className="h-2.5 w-2.5" />
                                                             <span className="hidden sm:inline">{messages.profile.click}</span>
                                                         </div>
@@ -205,7 +206,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                                             href={social.location_url}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="inline-flex items-center justify-center space-x-2 bg-accent hover:bg-accent-dark text-white px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
+                                                            className="contact-popover-action inline-flex items-center justify-center space-x-2 px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
                                                         >
                                                             <MapPinIcon className="h-4 w-4" />
                                                             <span>{messages.profile.googleMap}</span>
@@ -214,7 +215,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                                 </div>
 
                                             </div>
-                                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
+                                            <div className="contact-popover-arrow"></div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
@@ -235,11 +236,12 @@ export default function Profile({ author, social, features, researchInterests }:
                                         setShowEmail(!isEmailPinned);
                                         setLastClickedTooltip('email');
                                     }}
-                                    className={`p-2 sm:p-2 transition-colors duration-200 ${isEmailPinned
+                                    className={`p-2 rounded-md hover:bg-accent/10 transition-colors duration-200 ${isEmailPinned
                                         ? 'text-accent'
                                         : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
                                         }`}
                                     aria-label={link.name}
+                                    aria-expanded={link.isLocation ? showAddress || isAddressPinned : showEmail || isEmailPinned}
                                 >
                                     {isEmailPinned ? (
                                         <EnvelopeSolidIcon className="h-5 w-5" />
@@ -255,7 +257,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
                                             animate={{ opacity: 1, y: -10, scale: 1 }}
                                             exit={{ opacity: 0, y: -20, scale: 0.8 }}
-                                            className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-neutral-800 text-white px-4 py-3 rounded-lg text-sm font-medium shadow-lg max-w-[calc(100vw-2rem)] sm:max-w-none sm:whitespace-nowrap ${lastClickedTooltip === 'email' ? 'z-20' : 'z-10'
+                                            className={`contact-popover absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full px-4 py-3 text-sm max-w-[calc(100vw-2rem)] sm:max-w-none sm:whitespace-nowrap ${lastClickedTooltip === 'email' ? 'z-20' : 'z-10'
                                                 }`}
                                             onMouseEnter={() => {
                                                 if (!isEmailPinned) setShowEmail(true);
@@ -265,9 +267,9 @@ export default function Profile({ author, social, features, researchInterests }:
                                         >
                                             <div className="text-center">
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
-                                                    <p className="font-semibold">{messages.profile.email}</p>
+                                                    <p className="contact-popover-title font-semibold">{messages.profile.email}</p>
                                                     {!isEmailPinned && (
-                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-400 opacity-60">
+                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-500">
                                                             <Pin className="h-2.5 w-2.5" />
                                                             <span className="hidden sm:inline">{messages.profile.click}</span>
                                                         </div>
@@ -277,7 +279,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                                 <div className="mt-2">
                                                     <a
                                                         href={link.href}
-                                                        className="inline-flex items-center justify-center space-x-2 bg-accent hover:bg-accent-dark text-white px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
+                                                        className="contact-popover-action inline-flex items-center justify-center space-x-2 px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
                                                     >
                                                         <EnvelopeIcon className="h-4 w-4" />
                                                         <span className="sm:hidden">{messages.profile.send}</span>
@@ -285,7 +287,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
+                                            <div className="contact-popover-arrow"></div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>

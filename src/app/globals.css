@@ -324,3 +324,45 @@ html[data-locale^="zh"] .site-nav a {
   margin-top: -0.25rem;
   margin-bottom: 1rem;
 }
+
+
+.contact-popover {
+  --popover-background: var(--background);
+  background: var(--popover-background);
+  color: var(--neutral-600);
+  border: 1px solid var(--neutral-200);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px var(--glass-shadow);
+  line-height: 1.65;
+}
+
+.dark .contact-popover {
+  --popover-background: var(--panel);
+}
+
+.contact-popover-title {
+  color: var(--primary);
+}
+
+.contact-popover-action {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--background);
+}
+
+.contact-popover-action:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.contact-popover-arrow {
+  position: absolute;
+  top: calc(100% - 4px);
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  background: var(--popover-background);
+  border-right: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+  transform: rotate(45deg);
+}
