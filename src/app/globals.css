@@ -328,6 +328,8 @@ html[data-locale^="zh"] .site-nav a {
 
 .contact-popover {
   --popover-background: var(--background);
+  width: max-content;
+  max-width: calc(100vw - 2rem);
   background: var(--popover-background);
   color: var(--neutral-600);
   border: 1px solid var(--neutral-200);
