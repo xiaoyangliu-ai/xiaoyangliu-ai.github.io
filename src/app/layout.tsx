@@ -130,13 +130,11 @@ export default function RootLayout({
     <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href={config.site.favicon} type="image/svg+xml" />
-        <link rel="dns-prefetch" href="https://jialeliu.com" />
-        <link rel="preconnect" href="https://jialeliu.com" crossOrigin="" />
         <link
           rel="preload"
           as="font"
           type="font/woff2"
-          href="https://jialeliu.com/fonts/georgiab.woff2"
+          href="/fonts/newsreader-normal-400-600-latin.woff2"
           crossOrigin=""
         />
         <script
@@ -165,7 +163,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className="antialiased">
         <ThemeProvider>
           <LocaleProvider config={runtimeI18n}>
             <Navigation

@@ -109,10 +109,10 @@ export default function Profile({ author, social, features, researchInterests }:
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="sticky top-8"
+            className="lg:sticky lg:top-28 font-sans"
         >
             {/* Profile Image */}
-            <div className="w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
+            <div className="profile-portrait w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden">
                 <Image
                     src={author.avatar}
                     alt={author.name}
@@ -125,13 +125,13 @@ export default function Profile({ author, social, features, researchInterests }:
 
             {/* Name and Title */}
             <div className="text-center mb-6">
-                <h1 className="text-3xl font-serif font-bold text-primary mb-2">
+                <h1 className="text-[2rem] leading-tight font-serif font-semibold text-primary mb-3">
                     {author.name}
                 </h1>
-                <p className="text-lg text-accent font-medium mb-1">
+                <p className="text-sm text-primary font-semibold mb-2">
                     {author.title}
                 </p>
-                <p className="text-neutral-600 mb-2">
+                <p className="text-sm leading-relaxed text-neutral-600 mb-2">
                     {author.institution}
                 </p>
             </div>
@@ -305,9 +305,9 @@ export default function Profile({ author, social, features, researchInterests }:
 
             {/* Research Interests */}
             {researchInterests && researchInterests.length > 0 && (
-                <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 mb-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                    <h3 className="font-semibold text-primary mb-3">{messages.profile.researchInterests}</h3>
-                    <div className="space-y-2 text-sm text-neutral-700 dark:text-neutral-500">
+                <div className="research-panel mb-6">
+                    <h3 className="font-medium text-xs tracking-widest uppercase text-neutral-500 mb-3">{messages.profile.researchInterests}</h3>
+                    <div className="space-y-1 text-[1.05rem] font-body text-neutral-700 dark:text-neutral-500">
                         {researchInterests.map((interest, index) => (
                             <div key={index}>{interest}</div>
                         ))}

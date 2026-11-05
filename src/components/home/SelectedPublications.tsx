@@ -22,29 +22,29 @@ export default function SelectedPublications({ publications, title, enableOnePag
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
         >
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-serif font-bold text-primary">{resolvedTitle}</h2>
+            <div className="section-heading-row">
+                <h2 className="section-heading-title">{resolvedTitle}</h2>
                 <Link
                     href={enableOnePageMode ? "/#publications" : "/publications"}
                     prefetch={true}
-                    className="text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                    className="font-sans text-xs text-accent hover:text-accent-dark transition-colors"
                 >
                     {messages.home.viewAll} →
                 </Link>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-5">
                 {publications.map((pub, index) => (
                     <motion.div
                         key={pub.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.1 * index }}
-                        className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+                        className="paper-entry"
                     >
-                        <h3 className="font-semibold text-primary mb-2 leading-tight">
+                        <h3 className="entry-title text-primary mb-2">
                             {pub.title}
                         </h3>
-                        <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1">
+                        <p className="entry-meta text-neutral-600 dark:text-neutral-500 mb-2">
                             {pub.authors.map((author, idx) => (
                                 <span key={idx}>
                                     <span className={`${author.isHighlighted ? 'font-semibold text-accent' : ''} ${author.isCoAuthor ? `underline underline-offset-4 ${author.isHighlighted ? 'decoration-accent' : 'decoration-neutral-400'}` : ''}`}>
@@ -57,7 +57,7 @@ export default function SelectedPublications({ publications, title, enableOnePag
                                 </span>
                             ))}
                         </p>
-                        <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2">
+                        <p className="entry-meta text-neutral-600 dark:text-neutral-500 mb-3">
                             {pub.journal || pub.conference}
                         </p>
                         {pub.url && (
@@ -65,14 +65,14 @@ export default function SelectedPublications({ publications, title, enableOnePag
                                 href={pub.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mb-2 inline-flex items-center rounded-md bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 transition-colors hover:bg-accent hover:text-white dark:bg-neutral-700 dark:text-neutral-300"
+                                className="paper-link mb-3 inline-flex items-center"
                             >
                                 <LinkIcon className="mr-1.5 h-3 w-3" />
                                 {messages.publications.projectPage}
                             </a>
                         )}
                         {pub.description && (
-                            <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2">
+                            <p className="entry-description text-neutral-600 dark:text-neutral-500 line-clamp-2">
                                 {pub.description}
                             </p>
                         )}

@@ -18,13 +18,13 @@ export default function TextPage({ config, content, embedded = false }: TextPage
             transition={{ duration: 0.6, delay: 0.4 }}
             className={embedded ? "" : "max-w-3xl mx-auto"}
         >
-            <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
+            <h1 className={embedded ? "section-heading" : "page-heading"}>{config.title}</h1>
             {config.description && (
                 <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 mb-8 max-w-2xl`}>
                     {config.description}
                 </p>
             )}
-            <div className="text-neutral-700 dark:text-neutral-600 leading-relaxed">
+            <div className="academic-prose text-neutral-700 dark:text-neutral-600">
                 <ReactMarkdown
                     components={{
                         h1: ({ children }) => <h1 className="text-3xl font-serif font-bold text-primary mt-8 mb-4">{children}</h1>,
@@ -39,7 +39,7 @@ export default function TextPage({ config, content, embedded = false }: TextPage
                                 {...props}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-accent font-medium hover:underline transition-colors"
+                                className="prose-link"
                             />
                         ),
                         blockquote: ({ children }) => (

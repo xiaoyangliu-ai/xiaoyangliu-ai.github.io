@@ -72,7 +72,7 @@ export function ThemeToggle() {
         className={cn(
           'flex items-center justify-center w-10 h-10 rounded-lg',
           'border border-neutral-200 bg-background hover:bg-neutral-50',
-          'dark:border-[rgba(148,163,184,0.24)] dark:bg-neutral-800 dark:hover:bg-neutral-700',
+          'dark:border-[rgba(148,163,184,0.24)] dark:bg-neutral-800 dark:hover:bg-neutral-100',
           'transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50',
           'text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-white'
         )}
@@ -129,7 +129,7 @@ export function ThemeToggleDropdown() {
         className={cn(
           'flex items-center justify-center w-10 h-10 rounded-lg',
           'border border-neutral-200 bg-background hover:bg-neutral-50',
-          'dark:border-[rgba(148,163,184,0.24)] dark:bg-neutral-800 dark:hover:bg-neutral-700',
+          'dark:border-[rgba(148,163,184,0.24)] dark:bg-neutral-800 dark:hover:bg-neutral-100',
           'transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50',
           'text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-white'
         )}
@@ -166,11 +166,11 @@ export function ThemeToggleDropdown() {
                 }}
                 className={cn(
                   'flex items-center w-full px-3 py-2 text-sm',
-                  'hover:bg-neutral-50 dark:hover:bg-neutral-700',
+                  'hover:bg-neutral-50 dark:hover:bg-neutral-100',
                   'transition-colors duration-200',
                   theme === themeOption.value
                     ? 'text-accent bg-accent/10'
-                    : 'text-neutral-700 dark:text-neutral-300'
+                    : 'text-neutral-700 dark:text-neutral-600'
                 )}
               >
                 <span className="mr-2">{themeOption.icon}</span>
