@@ -1,12 +1,12 @@
 [site]
 title = "Xiaoyang Liu"
-description = "Incoming PhD student at the Zhejiang University."
+description = "PhD student at Zhejiang University."
 favicon = "/favicon.svg"
-last_updated = "March 14, 2026"
+last_updated = "November 5, 2026"
 
 [author]
 name = "Xiaoyang Liu"
-title = "Incoming PhD Student"
+title = "PhD Student"
 institution = "Zhejiang University"
 avatar = "/bio.jpg"
 
@@ -23,7 +23,7 @@ location_details = [
   "Hangzhou, Zhejiang, China"
 ]
 google_scholar = "https://scholar.google.com/citations?user=gJaPO5sAAAAJ&hl=en"
-github = "https://github.com/alpsle0n"
+github = "https://github.com/xiaoyangliu-ai"
 
 [features]
 # Show a like button on the about page

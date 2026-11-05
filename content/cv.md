@@ -5,7 +5,7 @@
 - Advisors: Prof. Chunhua Shen and Prof. Hao Chen
 - Research: Multimodal Agents, Embodied AI
 
-**Zhejiang University**, BSc in Computer Science and Technology, *2022 - 2026 (expected)*
+**Zhejiang University**, BSc in Computer Science and Technology, *2022 - 2026*
 - Chu Kochen Honors College, Mixed Class
 - Major: Computer Science and Technology
 
