@@ -3,9 +3,8 @@ title = "关于我"
 
 [profile]
 research_interests = [
-  "多模态智能体",
-  "具身智能",
-  "计算机视觉"
+  "Visual Coding Agents",
+  "World Models"
 ]
 
 [[sections]]

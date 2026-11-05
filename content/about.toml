@@ -3,9 +3,8 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Multimodal Agents",
-  "Embodied AI",
-  "Computer Vision"
+  "Visual Coding Agents",
+  "World Models"
 ]
 
 [[sections]]
