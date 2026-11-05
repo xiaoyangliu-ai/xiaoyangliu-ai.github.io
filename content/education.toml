@@ -1,6 +1,5 @@
 type = "card"
 title = "Education"
-description = "My academic journey."
 
 [[items]]
 title = "PhD in Computer Science"

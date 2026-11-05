@@ -79,6 +79,7 @@ export interface SiteConfig {
   };
   author: {
     name: string;
+    native_name?: string;
     title: string;
     institution: string;
     avatar: string;

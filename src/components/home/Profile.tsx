@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import InstitutionName from '@/components/ui/InstitutionName';
 import {
     EnvelopeIcon,
     AcademicCapIcon,
@@ -128,11 +129,14 @@ export default function Profile({ author, social, features, researchInterests }:
                 <h1 className="text-[2rem] leading-tight font-serif font-semibold text-primary mb-3">
                     {author.name}
                 </h1>
+                {author.native_name && author.native_name !== author.name && (
+                    <p lang="zh" className="profile-native-name">{author.native_name}</p>
+                )}
                 <p className="text-sm text-primary font-semibold mb-2">
                     {author.title}
                 </p>
                 <p className="text-sm leading-relaxed text-neutral-600 mb-2">
-                    {author.institution}
+                    <InstitutionName name={author.institution} />
                 </p>
             </div>
 

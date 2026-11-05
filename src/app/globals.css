@@ -163,7 +163,7 @@ button, a, input, select, textarea {
 }
 
 .academic-prose {
-  font-size: 1.1875rem;
+  font-size: 1.0625rem;
   line-height: 1.75;
 }
 
@@ -191,7 +191,7 @@ button, a, input, select, textarea {
 
 .entry-meta {
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.65;
 }
 
@@ -262,7 +262,7 @@ html[data-locale^="zh"] .site-nav a {
 ::-webkit-scrollbar-thumb:hover { background: var(--neutral-400); }
 
 @media (max-width: 639px) {
-  .academic-prose { font-size: 1.125rem; }
+  .academic-prose { font-size: 1.0625rem; }
   .section-heading, .section-heading-title { font-size: 1.65rem; }
 }
 
@@ -276,21 +276,6 @@ html[data-locale^="zh"] .site-nav a {
 }
 
 /* Keep the site's blue palette and softly framed cards alongside the serif type. */
-.section-heading,
-.section-heading-title {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.section-heading::before,
-.section-heading-title::before {
-  content: "";
-  flex: 0 0 1rem;
-  height: 2px;
-  background: var(--accent-light);
-}
-
 .research-panel {
   background: var(--panel);
   border: 1px solid var(--neutral-200);
@@ -316,4 +301,26 @@ html[data-locale^="zh"] .site-nav a {
 
 @media (max-width: 639px) {
   .paper-entry { padding: 1.15rem; }
+}
+
+.institution-logo,
+.academic-prose img[src="/images/zju.png"] {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.3em;
+  vertical-align: -0.15em;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.profile-native-name {
+  font-family: "Songti SC", "Noto Serif CJK SC", STSong, SimSun, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15em;
+  color: var(--neutral-500);
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
 }

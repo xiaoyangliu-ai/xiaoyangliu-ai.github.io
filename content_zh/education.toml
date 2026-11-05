@@ -1,6 +1,5 @@
 type = "card"
 title = "教育背景"
-description = "我的学术经历。"
 
 [[items]]
 title = "计算机科学博士"

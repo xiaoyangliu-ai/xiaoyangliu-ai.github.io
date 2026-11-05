@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { CardPageConfig } from '@/types/page';
+import InstitutionName from '@/components/ui/InstitutionName';
 
 export default function CardPage({ config, embedded = false }: { config: CardPageConfig; embedded?: boolean }) {
     return (
@@ -37,7 +38,7 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                             )}
                         </div>
                         {item.subtitle && (
-                            <p className="entry-meta text-neutral-600 mb-2">{item.subtitle}</p>
+                            <p className="entry-meta text-neutral-600 mb-2"><InstitutionName name={item.subtitle} /></p>
                         )}
                         {item.content && (
                             <p className="entry-description text-neutral-600 dark:text-neutral-500">
